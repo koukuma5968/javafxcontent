@@ -1,0 +1,663 @@
+/*メインビュー*/
+.selection-pane {
+  -fx-alignment: top-right;
+}
+
+/*メニューバー*/
+.topmenu {
+  -fx-background-color : rgba(39, 146, 195, 1);
+  -fx-alignment: center;
+}
+
+.topmenu-title {
+  -fx-alignment: center;
+  -fx-padding: 0 10;
+  -fx-font-size: 15;
+}
+
+.topmenu-title-image {
+  -fx-image : url("../icon/title.png");
+}
+
+.topmenu-title-text {
+  -fx-padding: 0 10;
+}
+
+.topmenu .close-button,
+.topmenu .expansion-button,
+.topmenu .reduction-button {
+  -fx-background-color : rgba(39, 146, 195, 1);
+  -fx-background-radius : 0;
+  -fx-text-fill: rgba(57, 63, 76, 1);
+  -fx-font-size: 18;
+  -fx-border-style: solid;
+  -fx-border-width: 0;
+}
+
+.topmenu .close-button:hover,
+.topmenu .expansion-button:hover,
+.topmenu .reduction-button:hover {
+  -fx-background-color: rgba(160, 216, 239, 1);
+  -fx-cursor:hand;
+  -fx-background-radius : 0;
+  -fx-border-style: solid;
+  -fx-border-width: 0;
+}
+
+/* 問題メニュー */
+.problem-menu {
+  -fx-background-color : rgba(39, 146, 195, 1);
+  -fx-padding:10 15;
+  -fx-font-size: 15;
+}
+
+/* 試験概要 */
+.cert-view {
+  -fx-padding: 5;
+  -fx-alignment: center;
+  -fx-background-color : rgba(243, 243, 243, 1);
+  -fx-background-radius: 5;
+}
+
+.cert-view-title {
+  -fx-padding:10;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-background-radius: 5 5 0 0;
+}
+
+.cert-head {
+}
+
+.cert-item {
+  -fx-border-style: solid;
+  -fx-border-color: rgba(160, 216, 239, 1);
+  -fx-border-width: 1;
+}
+
+.cert-title {
+  -fx-padding: 5 10;
+  -fx-background-color : rgba(243, 243, 243, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(255, 255, 255, 1);
+  -fx-border-width: 0 0 1 0;
+}
+
+.cert-value {
+  -fx-padding: 5 10;
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+/* 試験実行 */
+.exam-view {
+  -fx-padding: 10;
+  -fx-spacing: 15;
+}
+
+.exam-item {
+  -fx-padding: 10 15;
+  -fx-spacing: 10;
+  -fx-background-color : linear-gradient(to bottom, rgba(193, 228, 233, 1), rgba(160, 216, 239, 1));
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+
+.exam-item:hover {
+  -fx-cursor:hand;
+}
+
+.exam-button {
+  -fx-image : url("../icon/examination.png");
+}
+
+.exam-value {
+  -fx-label-padding: 0 10;
+  -fx-font-size:15;
+}
+
+/* 章節 */
+.ordinal-view {
+  -fx-alignment: top-left;
+  -fx-padding: 5;
+  -fx-background-color : rgba(243, 243, 243, 1);
+}
+
+.ordinal-content-grid {
+  -fx-padding:10;
+}
+
+.ordinal-content-title {
+  -fx-padding:10;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-background-radius:  5 5 0 0;
+}
+
+.ordinal-content-value {
+  -fx-fit-to-width: true;
+  -fx-pannable: true;
+}
+
+.ordinal-head {
+  -fx-padding: 5;
+}
+
+.ordinal-title {
+  -fx-padding:10;
+  -fx-wrap-text:true;
+  -fx-background-color : rgba(243, 243, 243, 1);
+  -fx-background-radius: 5 5 0 0;
+  -fx-border-style: solid;
+  -fx-border-radius: 2 2 0 0;
+  -fx-border-color: rgba(160, 216, 239, 1);
+  -fx-border-width: 1 1 0 1;
+}
+
+.ordinal-clauesGroup {
+  -fx-padding:10;
+  -fx-background-color :rgba(255, 255, 255, 1);
+  -fx-background-radius:  0 0 5 5;
+  -fx-border-style: solid;
+  -fx-border-radius: 0 0 2 2;
+  -fx-border-color: rgba(160, 216, 239, 1);
+  -fx-border-width: 0 1 1 1;
+}
+
+.ordinal-value {
+  -fx-wrap-text:true;
+  -fx-text-alignment:left;
+/*  -fx-effect: dropshadow(gaussian, rgba(160, 216, 239, 1), 5, 0, 2, 2); */
+}
+
+/* ツリーメニュー */
+.treelist-pane {
+  -fx-background-color : rgba(15, 35, 80, 1);
+  -fx-background-insets : 0;
+  -fx-background-radius : 0;
+  -fx-max-width: 180;
+}
+
+.treelist-pane .tree-cell,
+.target-item,
+.cate-item {
+  -fx-font-size:15;
+  -fx-text-fill : rgba(255, 255, 255, 1);
+  -fx-background-color : rgba(15, 35, 80, 1);
+}
+
+.treelist-pane .tree-cell:selected,
+.treelist-pane .tree-cell:selected > .target-item,
+.treelist-pane .tree-cell:selected > .cate-item {
+  -fx-text-fill : rgba(39, 146, 195, 1);
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.cate-item:hover,
+.target-item:hover {
+  -fx-cursor:hand;
+}
+
+.submenu {
+  -fx-vgap:10;
+  -fx-background-color : rgba(15, 35, 80, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(255, 255, 255, 1);
+  -fx-border-width: 0 1 0 0;
+}
+
+.submenu-item {
+  -fx-alignment: center;
+  -fx-padding: 5 15;
+  -fx-background-color : rgba(15, 35, 80, 1);
+}
+
+.submenu-item:hover {
+  -fx-cursor:hand;
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.submenu-item:hover > .sub-text {
+  -fx-text-fill : rgba(123, 124, 125, 1);
+}
+
+.sub-text {
+  -fx-padding:5 0;
+  -fx-alignment: center;
+  -fx-font-size:12;
+  -fx-text-fill : rgba(255, 255, 255, 1);
+}
+
+.exam-sub-button {
+  -fx-image : url("../icon/Qualification_gray.png");
+}
+
+.submenu-item:hover > .exam-sub-button {
+  -fx-image : url("../icon/Qualification_black.png");
+}
+
+.storage-sub-button {
+  -fx-image : url("../icon/Storage_gray.png");
+}
+
+.submenu-item:hover > .storage-sub-button {
+  -fx-image : url("../icon/Storage_black.png");
+}
+
+.arrivals-sub-button {
+  -fx-image : url("../icon/NewArrivals_gray.png");
+}
+
+.submenu-item:hover > .arrivals-sub-button {
+  -fx-image : url("../icon/NewArrivals_black.png");
+}
+
+/*アイテムビュー*/
+
+/* CenterView */
+.center-pane {
+  -fx-alignment: center;
+  -fx-padding: 10;
+  -fx-background-color : rgba(243, 243, 243, 1);
+}
+
+.init-title {
+  -fx-alignment: center;
+  -fx-background-color : rgba(243, 243, 243, 1);
+}
+
+.itemview-box {
+  -fx-padding:10;
+  -fx-background-radius: 50;
+}
+
+.itemview-box > .titled-pane {
+  -fx-label-padding: 5;
+  -fx-text-alignment:left;
+  -fx-border-style: solid ;
+  -fx-border-color:rgba(234, 244, 252, 1);
+  -fx-wrap-text:true;
+  -fx-display-caret:false;
+  -fx-focus-traversable:false;
+}
+
+/* 問題本文 */
+.problem-view {
+  -fx-alignment: center;
+  -fx-background-color : rgba(250, 250, 250, 1);
+}
+
+.problem-menu {
+  -fx-alignment: center-right;
+  -fx-background-color : rgba(234, 244, 252, 1);
+  -fx-font-size: 25;
+}
+
+.problem-menu-box {
+  -fx-alignment: center-right;
+}
+
+.question-view-init {
+  -fx-padding: 15;
+  -fx-alignment: center;
+  -fx-background-color : rgba(250, 250, 250, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 3 0 0 0;
+}
+
+.question-view {
+  -fx-font-size: 15;
+  -fx-padding: 15;
+  -fx-alignment: center-left;
+  -fx-background-color : rgba(250, 250, 250, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 3 0 0 0;
+}
+
+.question-number {
+  -fx-alignment: center-left;
+  -fx-font-size: 20;
+  -fx-padding: 5;
+}
+
+.question-box {
+  -fx-alignment: center-left;
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-padding: 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-fit-to-width: true;
+  -fx-hbar-policy: as-needed;
+  -fx-vbar-policy: as-needed;
+}
+
+.question-box .viewport {
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.question-border {
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.question-statement {
+  -fx-padding: 15 0;
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.question-code {
+  -fx-border-style: solid;
+  -fx-padding: 15 0;
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 1 0 0 0;
+}
+
+.question-code-field {
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.answer {
+  -fx-alignment: center;
+  -fx-padding: 15 0;
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 1 0 0 0;
+}
+
+.answer-box {
+  -fx-padding: 5 0;
+  -fx-background-color : rgba(255, 255, 255, 1);
+}
+
+.solution {
+  -fx-alignment: center;
+  -fx-padding: 5;
+}
+.solution-check {
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-padding: 15 20;
+}
+
+.explanatory-box {
+  -fx-alignment: center;
+  -fx-padding: 15;
+}
+
+.explanatory-text {
+  -fx-font-size: 30;
+  -fx-alignment: center-left;
+}
+
+.start-box {
+  -fx-padding: 15;
+  -fx-alignment: center;
+  -fx-font-size: 18;
+  -fx-border-style: solid;
+  -fx-border-width: 3 0 0 0;
+}
+
+.start-text {
+  -fx-padding: 20;
+}
+
+.run_box {
+  -fx-alignment: center;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-max-width: 200;
+  -fx-padding: 10 20;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+.run_box:hover {
+  -fx-cursor:hand;
+}
+
+.question-image {
+  -fx-image : url("../icon/question-black.png");
+}
+
+.run-button {
+  -fx-font: 20px "Serif";
+  -fx-padding: 0 20;
+}
+
+.question-cert-name {
+  -fx-alignment: center-left;
+  -fx-font-size: 18;
+  -fx-padding: 15;
+}
+
+.time-view {
+  -fx-alignment: center-left;
+  -fx-font-size: 18;
+  -fx-padding: 15;
+}
+
+.term-view {
+  -fx-font-size: 13;
+  -fx-alignment: center;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-max-width: 200;
+  -fx-padding: 10;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+
+.term-view:hover {
+  -fx-cursor:hand;
+}
+
+.term-image {
+  -fx-image : url("../icon/Termination_black.png");
+  -fx-padding: 0 10;
+  -fx-alignment: center;
+}
+
+.term-label {
+  -fx-padding: 0 10;
+}
+
+.npLabel-view {
+  -fx-alignment: center;
+  -fx-font-size: 18;
+  -fx-background-color : rgba(250, 250, 250, 1);
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 3 0 0 0;
+}
+
+.previous-box,
+.next-box {
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-max-width: 200;
+  -fx-max-height: 20;
+  -fx-padding: 10;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+
+.grad-box {
+  -fx-alignment: center;
+  -fx-background-color : rgba(255, 234, 0, 1);
+  -fx-padding: 10;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+
+.previous-image {
+  -fx-image : url("../icon/previous_black.png");
+  -fx-padding: 0 10;
+}
+
+.next-image {
+  -fx-image : url("../icon/next_black.png");
+  -fx-padding: 0 10;
+}
+
+.grad-image {
+  -fx-image : url("../icon/grad_blanck.png");
+  -fx-padding: 0 10;
+}
+
+.previous-label,
+.next-label,
+.grad-label {
+  -fx-padding: 0 10;
+}
+
+.checkans-view {
+  -fx-alignment: center;
+  -fx-padding: 15;
+}
+
+.checkans-table {
+}
+
+.column-header {
+  last-visible: false;
+}
+
+.checkans-num-box {
+  -fx-max-width: 800;
+  -fx-padding: 15;
+  -fx-spacing: 20;
+}
+
+.checkans-num-label {
+  -fx-alignment: center;
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-font-size: 40;
+  -fx-graphic-text-gap: 10;
+  -fx-label-padding:20;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+}
+
+.checkans-text-label {
+  -fx-alignment: center-left;
+  -fx-font-size: 30;
+  -fx-label-padding: 5 10;
+}
+
+.close-box {
+  -fx-font-size: 13;
+  -fx-alignment: center;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-max-width: 200;
+  -fx-padding: 10;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+}
+
+.close-box:hover {
+  -fx-cursor:hand;
+}
+
+.close-image {
+  -fx-image : url("../icon/Termination_black.png");
+  -fx-padding: 0 10;
+  -fx-alignment: center;
+}
+
+.close-label {
+  -fx-padding: 0 10;
+}
+
+.review-sol-box {
+  -fx-background-color : rgba(250, 250, 250, 1);
+  -fx-alignment: center;
+}
+
+.review-sol-box > .label {
+  -fx-padding: 10 15;
+  -fx-font-size: 30;
+}
+
+.storage-box {
+  -fx-font-size: 13;
+  -fx-alignment: center;
+  -fx-background-color : rgba(160, 216, 239, 1);
+  -fx-max-width: 300;
+  -fx-padding: 20;
+  -fx-background-radius : 10;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+  -fx-border-radius : 9;
+  -fx-focus-traversable: true;
+}
+
+.storage:hover {
+  -fx-cursor:hand;
+}
+
+.storage-image {
+  -fx-image : url("../icon/Storage_black.png");
+  -fx-padding: 0 10;
+  -fx-alignment: center;
+}
+
+.storage-label {
+  -fx-padding: 0 10;
+}
+
+.dialog-pane {
+  -fx-alignment: center;
+  -fx-font-size: 18;
+}
+
+.storage-view {
+  -fx-alignment: center;
+  -fx-padding: 15;
+  -fx-background-color : rgba(250, 250, 250, 1);
+}
+
+.storage-num-box {
+  -fx-padding: 15;
+  -fx-spacing: 20;
+}
+
+.storage-pane {
+  -fx-alignment: center;
+}
+
+.storage-table {
+  -fx-max-width: 320;
+}
+
+.storage-num-label {
+  -fx-alignment: center;
+  -fx-background-color : rgba(255, 255, 255, 1);
+  -fx-font-size: 28;
+  -fx-graphic-text-gap: 10;
+  -fx-label-padding:18;
+  -fx-border-style: solid;
+  -fx-border-color: rgba(15, 35, 80, 1);
+  -fx-border-width: 2;
+}
+
+.storage-text-label {
+  -fx-alignment: center-left;
+  -fx-font-size: 20;
+  -fx-label-padding: 5 10;
+}
