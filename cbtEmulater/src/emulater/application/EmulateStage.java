@@ -23,6 +23,8 @@ public class EmulateStage extends Application {
         super();
     }
 
+    private static Stage mainStage = null;
+
     private static Stage gradingStage = null;
 
     @SuppressWarnings("exports")
@@ -41,13 +43,15 @@ public class EmulateStage extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.getIcons().add(StyleUtil.getSystemIcon());
-//        stage.setMinWidth(500);
-//        stage.setWidth(950);
-//        stage.setMinHeight(300);
-//        stage.setHeight(600);
+        stage.setMinWidth(1200);
+        stage.setWidth(950);
+        stage.setMinHeight(900);
+        stage.setHeight(750);
         stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+
+        mainStage = stage;
 
         stage.show();
     }
@@ -62,7 +66,7 @@ public class EmulateStage extends Application {
         Scene scene = exe.getScene();
         scene.setRoot(pane);
 
-        Stage stage = (Stage) scene.getWindow();
+        Stage stage = mainStage;
         stage.setScene(scene);
         stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
@@ -78,7 +82,7 @@ public class EmulateStage extends Application {
 
         Scene scene = term.getScene();
         scene.setRoot(pane);
-        Stage stage = (Stage) scene.getWindow();
+        Stage stage = mainStage;
         stage.setScene(scene);
         stage.setFullScreen(true);
         stage.show();
@@ -102,11 +106,14 @@ public class EmulateStage extends Application {
         gradingStage.setScene(scene);
         gradingStage.initStyle(StageStyle.UNDECORATED);
         gradingStage.getIcons().add(StyleUtil.getSystemIcon());
-//        gradingStage.setFullScreen(true);
-        gradingStage.setWidth(950);
-        gradingStage.setHeight(600);
+        gradingStage.setFullScreen(true);
+//        gradingStage.setWidth(950);
+//        gradingStage.setHeight(600);
         gradingStage.setFullScreenExitHint("");
         gradingStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        mainStage.setFullScreen(false);
+        mainStage.setWidth(950);
+        mainStage.setHeight(600);
 
         gradingStage.show();
 
@@ -119,5 +126,6 @@ public class EmulateStage extends Application {
     public static void closeReview() {
         gradingStage.close();
         gradingStage = null;
+        mainStage.setFullScreen(true);
     }
 }

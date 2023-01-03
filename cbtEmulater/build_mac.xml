@@ -4,7 +4,7 @@
     <!--ANT 1.7 is required-->
     <!--define folder properties-->
     <property name="dir.buildfile" value="."/>
-    <property name="dir.workspace" value="E:/program/eclipse/pleiades-2019/pleiades/workspace"/>
+    <property name="dir.workspace" value="E:\program\git\javafxcontent"/>
     <property name="dir.jarfile" value="Y:/CBTエミュレータ/リリース/mac/cbtEmulater"/>
     <target name="create_run_jar">
         <jar destfile="${dir.jarfile}/cbtEmulater.jar">

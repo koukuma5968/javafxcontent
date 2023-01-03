@@ -109,7 +109,7 @@ public class EditerStage extends Application {
         String filename = "Problem" + numbertext.getText() + ".gz";
         FileChooser choise = new FileChooser();
         choise.setTitle("保存先選択");
-        choise.setInitialDirectory(new File("E:\\program\\eclipse\\pleiades-2019\\pleiades\\workspace\\problemEditer\\problem"));
+        choise.setInitialDirectory(new File("Y:\\CBTエミュレータ\\リリース\\problem"));
         choise.getExtensionFilters().add(new ExtensionFilter("gz",".gz"));
         choise.setInitialFileName(filename);
 

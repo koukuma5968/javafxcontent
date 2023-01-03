@@ -81,12 +81,14 @@ public class ProblemView extends BorderPane {
         Path failePath = Paths.get(exe.getPath());
         File files = failePath.toFile().getAbsoluteFile();
 
-        List<Problem> problemList = new ArrayList<Problem>();
+        List<Problem> tempList = new ArrayList<Problem>();
 
         for (File f : files.listFiles()) {
-            problemList.add((Problem) FileUtil.readProblemFile(Problem.class, f.getPath()));
+            tempList.add((Problem) FileUtil.readProblemFile(Problem.class, f.getPath()));
         }
-        Collections.shuffle(problemList);
+        Collections.shuffle(tempList);
+
+        List<Problem> problemList = tempList.subList(0, Integer.valueOf(exe.getNumber()));
 
         int count = 0;
 
